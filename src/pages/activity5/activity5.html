@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hospitales San Jose</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+ <ion-list>
+   <ion-item>
+     <ion-label>Cardiologia</ion-label>
+     <ion-toggle [(ngModel)]="cardiologia" (ionChange)="actualizarCaridologia()"></ion-toggle>
+   </ion-item>
+
+   <ion-item>
+     <ion-label>Neurocirugia</ion-label>
+     <ion-toggle [(ngModel)]="neurocirugia" (ionChange)="actualizaNeurocirugia()"></ion-toggle>
+   </ion-item>
+
+   <ion-item>
+     <ion-label>Cirugia</ion-label>
+     <ion-toggle [(ngModel)]="cirugia" (ionChange)="actualizaCirugia()"></ion-toggle>
+   </ion-item>
+   <ion-item>
+     <ion-label>Radiologia</ion-label>
+     <ion-toggle [(ngModel)]="radiologia" (ionChange)="actualizaRadiologia()"></ion-toggle>
+   </ion-item>
+   <ion-item>
+     <ion-label> Nefrología</ion-label>
+     <ion-toggle [(ngModel)]="nefrologia" (ionChange)="actualizaNefrologia()"></ion-toggle>
+   </ion-item>
+
+ </ion-list>
+</ion-content>
+
+

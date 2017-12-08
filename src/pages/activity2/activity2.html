@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hospitales San Jose</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="formgroup">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" formControlName="username"></ion-input> <!--ngControl="username"--> 
+      </ion-item>
+
+      <ion-item *ngIf="username.hasError('required') && username.touched">
+        <p>*UserName is required</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" formControlPassword="password" ></ion-input> <!--ngControl="password"-->
+      </ion-item>
+      <ion-item *ngIf="password.hasError('required') && password.touched">
+        <p>*Password is required</p>
+      </ion-item>
+     </ion-list>
+    <button type="submit" (click)="submit(username)" block>Login</button>
+  </form>
+</ion-content>
+
